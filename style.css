@@ -467,20 +467,19 @@ input:focus, textarea:focus {
     color: var(--metallic-silver);
 }
 
-.map-placeholder {
+.map-container {
     margin-top: 30px;
-    height: 200px;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px dashed rgba(255,255,255,0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #A0AAB5;
-    font-size: 0.9rem;
+    height: 250px; /* Aumentamos um pouco a altura para melhorar a visualização */
+    border-radius: 6px; /* Cantos arredondados premium */
+    overflow: hidden; /* Força o mapa do Google a respeitar o arredondamento dos cantos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Sombra suave para dar profundidade no fundo escuro */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Linha fina e discreta ao redor */
 }
-
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 .map-placeholder i {
     font-size: 2rem;
 }
